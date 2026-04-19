@@ -1,0 +1,198 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --font-primary: "Poppins", sans-serif;
+
+  /* Typography Sizes */
+  --title-display-size: 40px;
+  --title-medium-size: 22px;
+  --title-small-size: 18px;
+  --body-medium-size: 16px;
+  --body-small-size: 14px;
+  --label-medium-size: 14px;
+  --label-small-size: 12px;
+
+  /* Line Heights */
+  --lh-title-display: 1;
+  --lh-title-medium: 1.2;
+  --lh-title-small: 1.2;
+  --lh-body-medium: 1.5;
+  --lh-body-small: 1.5;
+  --lh-label-medium: 1.4;
+  --lh-label-small: 1.4;
+
+  /* Font Weights */
+  --fw-regular: 300;
+  --fw-heavy: 600;
+  --fw-extrabold: 800;
+
+  /* Colors */
+  --background: #ffffff;
+  --foreground: #1b1b23;
+
+  --card: #ffffff;
+  --card-foreground: #1b1b23;
+
+  --popover: #ffffff;
+  --popover-foreground: #1b1b23;
+
+  /* Updated Primary to match reference #106B73 */
+  --primary: #005198;
+  --primary-foreground: #ffffff;
+
+  /* Updated Secondary/Muted to match reference #e9eaec */
+  --secondary: #e9eaec;
+  --secondary-foreground: #464a53;
+
+  --muted: #e9eaec;
+  --muted-foreground: #545864;
+
+  --accent: #005198;
+  --accent-foreground: #ffffff;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #9BBEDC;
+  --input: #d3c4fc;
+  --ring: #005198;
+
+  --radius: 16px;
+
+  /* Shadows */
+  --shadow-card: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0px 2px 12px 0px rgba(0, 81, 152, 0.5);
+  --shadow-hard: 4px 4px 0px 0px rgba(0, 81, 152, 0.4);
+  --elevation-sm: var(--shadow-card);
+}
+
+.dark {
+  --background: #1b1b23;
+  --foreground: #ffffff;
+  --card: #1b1b23;
+  --card-foreground: #ffffff;
+  --primary: #005198;
+  --primary-foreground: #ffffff;
+  --muted: #2d2d3a;
+  --muted-foreground: #a0a0a0;
+  --border: #4a4a5a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* Typography Classes */
+
+.heading-display {
+  font-size: 40px;
+  font-weight: 800; /* extrabold */
+  line-height: 1; /* leading-none */
+  letter-spacing: -4px;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 14px rgba(0, 81, 152, 0.5);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.title-medium-heavy {
+  font-family: var(--font-primary);
+  font-size: var(--title-medium-size);
+  line-height: var(--lh-title-medium);
+  font-weight: var(--fw-heavy);
+}
+
+.title-small-heavy {
+  font-family: var(--font-primary);
+  font-size: var(--title-small-size);
+  line-height: var(--lh-title-small);
+  font-weight: var(--fw-heavy);
+}
+
+.body-md-normal {
+  font-family: var(--font-primary);
+  font-size: var(--body-medium-size);
+  line-height: var(--lh-body-medium);
+  font-weight: var(--fw-regular);
+}
+
+.body-md-heavy {
+  font-family: var(--font-primary);
+  font-size: var(--body-medium-size);
+  line-height: var(--lh-body-medium);
+  font-weight: var(--fw-heavy);
+}
+
+.body-sm-normal {
+  font-family: var(--font-primary);
+  font-size: var(--body-small-size);
+  line-height: var(--lh-body-small);
+  font-weight: var(--fw-regular);
+}
+
+.label-md-normal {
+  font-family: var(--font-primary);
+  font-size: var(--label-medium-size);
+  line-height: var(--lh-label-medium);
+  font-weight: var(--fw-regular);
+}
+
+.label-md-heavy {
+  font-family: var(--font-primary);
+  font-size: var(--label-medium-size);
+  line-height: var(--lh-label-medium);
+  font-weight: var(--fw-heavy);
+}
+
+.label-sm-normal {
+  font-family: var(--font-primary);
+  font-size: var(--label-small-size);
+  line-height: var(--lh-label-small);
+  font-weight: var(--fw-regular);
+}
+
+.greeting {
+  font-family: var(--font-primary);
+  font-size: var(--body-medium-size);
+  line-height: var(--lh-body-medium);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.5px;
+}
+
