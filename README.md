@@ -23,7 +23,7 @@ https://supabase.com
 •	Create a new project
 •	Wait until the project is ready
 ________________________________________
-2. Setup Database
+2. Set up Database
 Open Supabase:
 → SQL Editor
 → Paste contents of database.sql
@@ -48,7 +48,7 @@ VITE_SUPABASE_URL=your_project_url
 VITE_SUPABASE_ANON_KEY=your_anon_key
 ________________________________________
 5. Install Dependencies
-In project folder, run:
+In the project folder, run:
 npm install
 ________________________________________
 6. Run Application (Local)
@@ -76,7 +76,7 @@ To enable SSO:
 •	Add required credentials (Google Cloud / Azure)
 ________________________________________
 👥 User Roles
-•	User → Can book seats, view cafeteria, add comments
+•	User → Can book seats, view the cafeteria, and add comments
 •	Admin → Can manage seats and system configuration
 ________________________________________
 📊 Data Ownership
