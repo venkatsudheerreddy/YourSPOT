@@ -470,7 +470,7 @@ export function SeatSelectionScreen({
       const { data: seatsData, error: seatsError } =
         await supabase
           .from("seats")
-          .select("id, seat_name, zone, is_blocked")
+          .select("id, seat_name, zone, x, y, orientation, is_blocked")
           .eq("zone", activeZone);
 
       if (seatsError) throw seatsError;
